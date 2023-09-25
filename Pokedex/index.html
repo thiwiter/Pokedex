@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="img/pikachu.png">
+    <script src="./js/model.js"></script>
+    <script src="./js/pokeapi.js"></script>
+    <script src="./js/main.js" defer></script>
+    <title> Pokedex </title>
+</head>
+<body>
+    <header>
+        <button type="button"><img src="img/back.png" alt="Arrow left"></button>
+        <nav>
+            <span class="menu-bar"></span>
+            <span class="menu-bar"></span>
+            <span class="menu-bar"></span>
+        </nav>
+    </header>
+    <main>
+        <h1>Pokedex</h1>
+        <ol class="cards">
+        <!----- Pokemon cards here! ----->
+        </ol>
+        <button type="button" onclick="handleButtonClick()">Mais Pokémons</button>
+        <!----- Pokemon detail here! ----->
+        <dialog>
+            <header>
+                <button type="button" onclick="closeModal()"><img src="img/back.png" alt="Arrow left"></button>
+                <button type="button" onclick="handleHeartClick()"><img id="heart" clicked=false src="./img/heart.png" alt="Heart icon"></button>
+            </header>
+            <section class="presentation">
+                <span class="circle grass"></span>
+                <img src="https://raw.githubusercontent.com/HybridShivam/Pokemon/master/assets/images/001.png" alt="bulbasaur">
+                <div>
+                    <h2>Bulbasaur</h2>
+                    <span>#001</span>
+                </div>
+            </section>
+            <section class="details">
+                <ol>
+                    <li>
+                        <img onclick="handleArrowClick()" src="./img/right-arrow-sharp.png" alt="Right arrow">
+                        <table id="about">
+                        </table>
+                    </li>
+                    <li>
+                        <img onclick="handleArrowClick()" src="./img/right-arrow-sharp.png" alt="Left arrow">
+                        <img onclick="handleArrowClick()" src="./img/right-arrow-sharp.png" alt="Right arrow">
+                        <table id="stats">
+                        </table>
+                    </li>
+                </ol>
+            </section>
+        </dialog>
+    </main>
+    <footer>
+        <p>Consuming PokeAPI – September, 2023.</p>
+    </footer>
+</body>
+</html>
